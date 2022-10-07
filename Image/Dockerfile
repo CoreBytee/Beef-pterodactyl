@@ -7,7 +7,7 @@ RUN curl -sSL https://get.rvm.io | bash -s -- --autolibs=install-packages
 RUN sudo .rvm/bin/rvm requirements
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby
 RUN rvm install "ruby-2.5.3"
-RUN git clone https://github.com/beefproject/beef && cd ./beef && ./install
+RUN git clone https://github.com/beefproject/beef && cd ./beef && ./install && cd ..
 
 USER container
 ENV  USER=container HOME=/home/container
